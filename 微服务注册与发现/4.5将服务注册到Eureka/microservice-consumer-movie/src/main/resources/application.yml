@@ -1,0 +1,12 @@
+server:
+  port: 8667
+
+spring:
+  application:
+    name: microservice-consumer-movie  #注册到Eureka Server上的应用名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8668/eureka/,http://localhost:8669/eureka/
+  instance:
+    prefer-ip-address: true  #表示将注解的IP注册到Eureka Server

@@ -1,0 +1,22 @@
+server:
+  port: 9000
+eureka:
+#  instance:
+#    hostname: peer2
+  client:
+    register-with-eureka: false
+    #表示是否将注解注册到Eureka Server，默认为true
+    #由于当前应用就是Eureka Server ，所以设为false
+
+    fetch-registry: false
+    #表示是否从Eureka Server获取注册信息，默认为true
+    #因为这单点Eureka Server，不需要同步其他Eureka Server，所以为false
+
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+      #设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址，
+      #多个地址可用 , 分隔
+#spring:
+#  application:
+#    name: microservice-discovery-eureka
+#  profiles: peer2

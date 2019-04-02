@@ -1,0 +1,12 @@
+
+server:
+  port: 9107
+spring:
+  application:
+    name: microservice-gateway-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9100/eureka/
+    instance:
+      prefer-ip-address: true

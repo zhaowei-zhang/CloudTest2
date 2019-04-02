@@ -1,0 +1,18 @@
+server:
+  port: 9105
+
+spring:
+  application:
+    name: microservice-consumer-movie-2  #注册到Eureka Server上的应用名称
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9100/eureka/
+  instance:
+    prefer-ip-address: true  #表示将注解的IP注册到Eureka Server
